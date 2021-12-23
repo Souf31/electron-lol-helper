@@ -2,17 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Hello Electron React!</title>
+    <title>OP.GG</title>
   </head>
   <body>
-    <div id="root"></div>
+    <main id="root"></main>
   </body>
-  <script>
-    window.electron.ipcRenderer.once('ipc-example', (arg) => {
-      // eslint-disable-next-line no-console
-      console.log(arg);
-    });
-
-    window.electron.ipcRenderer.myPing();
   </script>
 </html>

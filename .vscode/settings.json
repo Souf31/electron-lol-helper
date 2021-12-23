@@ -26,6 +26,17 @@
     "CODE_OF_CONDUCT.md": true,
     "CHANGELOG.md": true,
     ".gitignore": true,
-    ".gitattributes": true
+    ".gitattributes": true,
+    ".eslintrc.js": true,
+    ".eslintignore": true,
+    ".editorconfig": true,
+    "release": true,
+    "node_modules": true,
+    "release\\app": true,
+    ".vscode": true,
+    ".husky": true,
+    ".github": true,
+    ".erb": true,
+    "src\\__tests__": true
   }
 }
