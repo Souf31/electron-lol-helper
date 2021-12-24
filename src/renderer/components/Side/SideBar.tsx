@@ -2,6 +2,8 @@
 
 import './SideBar.css'
 
+import { Link } from 'react-router-dom'
+
 import MultiSearchSvg from "./MultiSearchSvg";
 import ChampionSvg from "./ChampionSvg";
 import InGameSvg from "./InGameSvg";
@@ -39,18 +41,21 @@ function SideBar() {
             <h1>Live Game</h1>
           </div>
           <div className="side-href">
-            <a href="" className="side-href-item side-href-item-active" draggable="false">
+
+          <Link to="/" style={{ textDecoration:'none', color: "#fff" }}><a href="" className="side-href-item side-href-item-active" draggable="false">
                 <MultiSearchSvg fill="#fff"/>
                 <span className='side-href-item-title'>Multi-Search</span>
-            </a>
-            <a href="" className="side-href-item" draggable="false">
+            </a></Link>
+
+            <Link to="/Champion" style={{ textDecoration:'none', color: "#fff" }}><a href="" className="side-href-item" draggable="false">
                 <ChampionSvg fill="#7b7a8e"/>
                 <span className='side-href-item-title'>Champion</span>
-            </a>
-            <a href="" className="side-href-item" draggable="false">
+            </a> </Link>
+
+            <Link to="/InGame" style={{ textDecoration:'none', color: "#fff" }}>  <a href="" className="side-href-item" draggable="false">
                 <InGameSvg fill="#7b7a8e"/>
                 <span className='side-href-item-title'>In-Game</span>
-            </a>
+            </a> </Link>
           </div>
         </div>
 
