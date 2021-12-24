@@ -119,3 +119,40 @@
   margin-left: 16px;
   margin-right: 8px;
 }
+
+.side-contour {
+  margin: 9px 0 4px 16px;
+  width: 20px;
+  height: 1px;
+  background-color: #424254;
+}
+
+.side-menu {
+  padding-left: 16px;
+  margin-top: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu li {
+  list-style-type: none;
+}
+
+.side-menu-item {
+  font-size: 12px;
+  font-weight: 700;
+  color: #7b7a8e;
+}
+
+.side-menu-item+.side-menu-item {
+  margin-top: 16px;
+}
+
+.side-version {
+  margin: 32px 16px 16px auto;
+  font-size: 12px;
+}
