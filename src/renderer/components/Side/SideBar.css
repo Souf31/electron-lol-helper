@@ -87,7 +87,7 @@
   flex: 1;
 }
 
-.side-liveGame, .side-liveGame-icon, .side-item-title {
+.side-liveGame-icon, .side-liveGame .side-item-title {
   display: flex;
   align-items: center;
 }
@@ -107,6 +107,12 @@
   height: 32px;
   font-size: 14px;
   color: #7b7a8e;
+}
+
+.side-href-item-active {
+  background: #5f32e6;
+  color: #fff;
+  border-radius: 4px;
 }
 
 .side-href-item-icon {

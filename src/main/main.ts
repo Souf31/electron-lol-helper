@@ -16,6 +16,7 @@ import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
+import { NONAME } from 'dns';
 
 export default class AppUpdater {
   constructor() {
@@ -79,7 +80,7 @@ const createWindow = async () => {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
-    titleBarStyle:'hidden',
+    frame: false,
   });
 
   mainWindow.loadURL(resolveHtmlPath('index.html'));
