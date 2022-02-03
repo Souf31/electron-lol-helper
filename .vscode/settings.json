@@ -19,24 +19,22 @@
     "*.{css,sass,scss}.d.ts": true
   },
   "files.exclude": {
-    "tsconfig.json": true,
+    ".editorconfig": true,
+    ".eslintrc.js": true,
+    ".gitattributes": true,
+    ".gitignore": true,
+    "CODE_OF_CONDUCT.md": true,
+    "LICENSE": true,
+    "package.json": true,
     "README.md": true,
     "package-lock.json": true,
-    "LICENSE": true,
-    "CODE_OF_CONDUCT.md": true,
+    "tsconfig.json": true,
     "CHANGELOG.md": true,
-    ".gitignore": true,
-    ".gitattributes": true,
-    ".eslintrc.js": true,
     ".eslintignore": true,
-    ".editorconfig": true,
-    "release": true,
-    "node_modules": true,
-    "release\\app": true,
+    ".github": true,
     ".vscode": true,
     ".husky": true,
-    ".github": true,
-    ".erb": true,
-    "src\\__tests__": true
+    "node_modules": true,
+    "release": true
   }
 }

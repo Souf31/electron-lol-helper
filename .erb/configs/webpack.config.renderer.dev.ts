@@ -94,6 +94,11 @@ const configuration: webpack.Configuration = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      // Video loading
+      {
+        test: /\.mp4$/,
+        use: 'file-loader?name=videos/[name].[ext]',
+      },
     ],
   },
   plugins: [

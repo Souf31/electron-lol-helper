@@ -16,7 +16,6 @@ import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
-import { NONAME } from 'dns';
 
 export default class AppUpdater {
   constructor() {
@@ -28,10 +27,25 @@ export default class AppUpdater {
 
 let mainWindow: BrowserWindow | null = null;
 
-ipcMain.on('ipc-example', async (event, arg) => {
-  const msgTemplate = (pingPong: string) => `IPC test: ${pingPong}`;
-  console.log(msgTemplate(arg));
-  event.reply('ipc-example', msgTemplate('pong'));
+ipcMain.on('windowCommand', async (event, command) => {
+  const msgTemplate = (msg: string) => `windowCommand received: ${msg}`;
+  console.log(msgTemplate(command));
+  event.reply('windowCommand', msgTemplate('${command}'));
+
+  switch(command) {
+    case 'close': {
+      mainWindow?.close();
+      break;
+    }
+    case 'minimize' : {
+      mainWindow?.minimize();
+      break;
+    }
+    default: {
+      break;
+    }
+  }
+
 });
 
 if (process.env.NODE_ENV === 'production') {
@@ -80,6 +94,8 @@ const createWindow = async () => {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
+    resizable: false,
+    //titleBarStyle: "hiddenInset"
     frame: false,
   });
 

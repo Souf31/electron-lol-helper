@@ -9,8 +9,8 @@ import ChampionSvg from "./ChampionSvg";
 import InGameSvg from "./InGameSvg";
 import ComboSvg from "./ComboSvg";
 import OPChampionsSvg from "./OPChampionsSvg";
-import iconSetting from "../../../../assets/icon-setting.svg";
-import iconDiscord from "../../../../assets/icon-discord.svg";
+import iconSetting from "../../../../public/assets/icon-setting.svg";
+import iconDiscord from "../../../../public/assets/icon-discord.svg";
 
 let imgs = [
   "https://opgg-static.akamaized.net/images/lol/spell/SummonerFlash.png?image=c_scale,q_auto,w_42&v=1626880099"
@@ -42,20 +42,20 @@ function SideBar() {
           </div>
           <div className="side-href">
 
-          <Link to="/" style={{ textDecoration:'none', color: "#fff" }}><a href="" className="side-href-item side-href-item-active" draggable="false">
+            <Link to="/MultiSearch" style={{ textDecoration:'none', color: "#fff" }} className="side-href-item side-href-item-active" draggable="false">
                 <MultiSearchSvg fill="#fff"/>
                 <span className='side-href-item-title'>Multi-Search</span>
-            </a></Link>
+            </Link>
 
-            <Link to="/Champion" style={{ textDecoration:'none', color: "#fff" }}><a href="" className="side-href-item" draggable="false">
+            <Link to="/Champion" style={{ textDecoration:'none', color: "#fff" }} className="side-href-item" draggable="false">
                 <ChampionSvg fill="#7b7a8e"/>
                 <span className='side-href-item-title'>Champion</span>
-            </a> </Link>
+            </Link>
 
-            <Link to="/InGame" style={{ textDecoration:'none', color: "#fff" }}>  <a href="" className="side-href-item" draggable="false">
+            <Link to="/InGame" style={{ textDecoration:'none', color: "#fff" }} className="side-href-item" draggable="false">
                 <InGameSvg fill="#7b7a8e"/>
                 <span className='side-href-item-title'>In-Game</span>
-            </a> </Link>
+            </Link>
           </div>
         </div>
 

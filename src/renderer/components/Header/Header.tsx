@@ -1,18 +1,30 @@
 //@ts-nocheck
 
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-import './Header.css'
 
-import iconOPGG from "../../../../assets/opgg-logo-square.svg";
-import iconLOL from "../../../../assets/img-sidebar-lol.svg";
-import iconSearch from "../../../../assets/icon-search.svg"
-import iconChat from "../../../../assets/profileIcon.jpg"
-import iconMinimize from "../../../../assets/icon-minus.svg"
-import iconClose from "../../../../assets/icon-close.svg"
-import iconSidebar from "../../../../assets/icon-mini.svg"
+
+
+import './Header.css';
+
+import iconOPGG from "../../../../public/assets/opgg-logo-square.svg";
+import iconLOL from "../../../../public/assets/img-sidebar-lol.svg";
+import iconSearch from "../../../../public/assets/icon-search.svg"
+import iconChat from "../../../../public/assets/profileIcon.jpg"
+import iconMinimize from "../../../../public/assets/icon-minus.svg"
+import iconClose from "../../../../public/assets/icon-close.svg"
+import iconSidebar from "../../../../public/assets/icon-mini.svg"
+
+
+
 
 function Header() {
+
+  const windowCommand = (arg : string) => {
+    window.electron.ipcRenderer.windowCommand(arg);
+  };
+
   return (
     <header id='app-header-win' className='app-header'>
 
@@ -44,8 +56,8 @@ function Header() {
       </div>
 
       <div className="title-bar-tools">
-        <div className="tool-wrapper" id="minimize"><img alt="minimize" src={iconMinimize}/></div>
-        <div className="tool-wrapper" id="close"><img alt="close" src={iconClose}/></div>
+        <div className="tool-wrapper" id="minimize" onClick={() => windowCommand('minimize')}><img alt="minimize" src={iconMinimize}/></div>
+        <div className="tool-wrapper" id="close" onClick={() => windowCommand('close')}><img alt="close" src={iconClose}/></div>
         <div className="tool-wrapper"><img alt="sidebar" src={iconSidebar}/></div>
       </div>
 

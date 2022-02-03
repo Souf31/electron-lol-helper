@@ -7,7 +7,7 @@
   top: 0;
   position: fixed;
   justify-content: space-between;
-  -webkit-app-region: drag;
+  /*-webkit-app-region: drag;*/
   width: calc(100% - 32px);
   height: 64px;
   border-bottom: 1px solid #282830;
@@ -37,7 +37,7 @@ div, img {
 
 .summoner-search {
   position: relative;
-  -webkit-app-region: no-drag;
+  /* -webkit-app-region: no-drag; */
   margin-right: 24px;
 }
 
@@ -84,7 +84,7 @@ div, img {
 }
 
 img {
-  -webkit-user-drag : none;
+  /* -webkit-user-drag : none; */
 }
 
 .account {
@@ -99,7 +99,7 @@ img {
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
-  -webkit-app-region: no-drag;
+  /* -webkit-app-region: no-drag; */
   cursor: pointer;
 }
 
@@ -116,7 +116,7 @@ img {
 .title-bar-tools {
   display: flex;
   align-self: center;
-  -webkit-app-ragion : no-drag;
+  /* -webkit-app-ragion : no-drag; */
 }
 
 .tool-wrapper {
