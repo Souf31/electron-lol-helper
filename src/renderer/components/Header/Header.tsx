@@ -15,6 +15,7 @@ import iconChat from "../../../../public/assets/profileIcon.jpg"
 import iconMinimize from "../../../../public/assets/icon-minus.svg"
 import iconClose from "../../../../public/assets/icon-close.svg"
 import iconSidebar from "../../../../public/assets/icon-mini.svg"
+import { NONAME } from 'dns';
 
 
 
@@ -40,13 +41,13 @@ function Header() {
           <img alt="icon" src={iconSearch} />
         </div>
         <div className="account-info account-info-win">
-          <div className="profile-image-wrapper">
-            <img className="info-profile-image" src={iconChat} alt="thumbnail"/>
-          </div>
+        <Link to={"/"} style={{textDecoration: 'none', color : '#fff'}}><div className="profile-image-wrapper">
+            <img className="info-profile-image" src='https://opgg-static.akamaized.net/images/profile_icons/profileIcon5246.jpg?image=q_auto:best,w_100&v=1518361200' alt="thumbnail"/>
+          </div></Link>
 
           <div className="account">
             <div className="summoner-name">
-            <div className="info-summoner-name">Login First</div>
+            <Link to={"/"} style={{textDecoration: 'none', color : '#fff'}}><div className="info-summoner-name">Soùf</div></Link>
             </div>
             <div className="text-account-wrapper">
               <div className="text-account">LoL Account</div>
