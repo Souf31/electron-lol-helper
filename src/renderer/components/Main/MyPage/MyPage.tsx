@@ -90,7 +90,7 @@ function MyPage() {
                         color: '#fff',
                       }}
                     >
-                      Gold I
+                      Platinum IV
                     </div>
                     <div>80 LP</div>
                   </div>
